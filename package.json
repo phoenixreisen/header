@@ -1,0 +1,36 @@
+{
+  "name": "@phoenixreisen/config-handler",
+  "version": "1.0.1",
+  "description": "Provides some functionality around handling config data. Saves/Loads local config to/from Browser Storage and merges it with a given static config.",
+  "homepage": "https://www.phoenixreisen.com",
+  "main": "config.handler.js",
+  "scripts": {
+    "pretest": "babel src --out-dir test",
+    "test": "ospec",
+    "posttest": "del-cli test"
+  },
+  "author": "Phoenix Reisen <it@phoenixreisen.com>",
+  "contributors": [
+    "Phoenix Reisen <it@phoenixreisen.com>",
+    "Fabian Marcus <f.marcus@phoenixreisen.com>",
+    "Jan Hermanns <j.hermanns@phoenixreisen.com>",
+    "Leon Schmitz <l.schmitz@phoenixreisen.com>"
+  ],
+  "repository": {
+    "type": "hg",
+    "url": "ssh://hg@bitbucket.org/phoenixreisen/component-config-handler"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-file-loader": "^1.0.0",
+    "babel-plugin-inline-svg": "^1.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "del-cli": "^1.1.0",
+    "mithril": "^1.1.6",
+    "mithril-node-render": "^2.3.0",
+    "mithril-query": "^2.4.0"
+  }
+}

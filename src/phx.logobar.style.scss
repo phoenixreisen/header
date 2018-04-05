@@ -1,0 +1,17 @@
+.phx-logobar {
+    position: relative;
+    padding-bottom: 1.5em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid $gray5;
+
+    .phx-logobar__logo {
+        display: inline-block;
+        width: 200px;
+    }
+    
+    .phx-logobar__version {
+        margin: 0;
+        padding: 0 0.5em;
+        font-size: smaller;
+    }    
+}
