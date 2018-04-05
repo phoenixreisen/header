@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/logobar",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Provides some functionality around handling config data. Saves/Loads local config to/from Browser Storage and merges it with a given static config.",
   "homepage": "https://www.phoenixreisen.com",
   "main": "src/phx.logobar.view.js",
