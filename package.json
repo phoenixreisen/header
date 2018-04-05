@@ -1,6 +1,6 @@
 {
-  "name": "@phoenixreisen/config-handler",
-  "version": "1.1.0",
+  "name": "@phoenixreisen/logobar",
+  "version": "1.2.0",
   "description": "Provides some functionality around handling config data. Saves/Loads local config to/from Browser Storage and merges it with a given static config.",
   "homepage": "https://www.phoenixreisen.com",
   "main": "config.handler.js",
