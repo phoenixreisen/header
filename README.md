@@ -2,6 +2,8 @@
 
 Eine einfache Leiste, die das Phoenix-Logo sowie, bei Bedarf, eine Versionsnummer darstellt. Es geht mehr um das Logo als um die Leiste, welches sich über die Komponente zentral in alle Services importieren lässt.
 
+Prinzipiell soll diese Komponente den Standard-Header für alle Phoenix-Services bereitstellen.
+
 ## Installation
 
 ```bash
