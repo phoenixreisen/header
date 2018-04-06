@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/logobar",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "This component should provide the default header - including the default Phoenix Logo - for all (micro) services.",
   "homepage": "https://www.phoenixreisen.com",
   "main": "src/phx.logobar.view.js",
@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "hg",
-    "url": "ssh://hg@bitbucket.org/phoenixreisen/component-config-handler"
+    "url": "ssh://hg@bitbucket.org/phoenixreisen/component-logobar"
   },
   "license": "ISC",
   "devDependencies": {
