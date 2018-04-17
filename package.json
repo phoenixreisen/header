@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/logobar",
-  "version": "1.2.4",
+  "version": "1.3.0",
   "description": "This component should provide the default header - including the default Phoenix Logo - for all (micro) services.",
   "homepage": "https://www.phoenixreisen.com",
   "main": "src/phx.logobar.view.js",
