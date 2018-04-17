@@ -1,3 +1,6 @@
 .babelrc
+.hgignore
+package-lock.json
 
+tests/
 node_modules/
