@@ -6,7 +6,12 @@
 
     .phx-logobar__logo {
         display: inline-block;
-        width: 200px;
+        min-width: 200px;
+        max-width: 300px;
+
+        > img {
+            max-width: 100%;
+        }
     }
     
     .phx-logobar__version {
