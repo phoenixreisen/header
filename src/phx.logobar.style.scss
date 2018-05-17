@@ -2,7 +2,7 @@
     position: relative;
     padding-bottom: 1.5em;
     margin-bottom: 2em;
-    border-bottom: 1px solid $gray5;
+    border-bottom: 5px solid $gray5;
 
     .phx-logobar__logo {
         display: inline-block;
@@ -16,7 +16,7 @@
     
     .phx-logobar__version {
         margin: 0;
-        padding: 0 0.5em;
+        padding: 0 10px;
         font-size: smaller;
     }    
 }
