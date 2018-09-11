@@ -1,8 +1,10 @@
 # Phoenix Logo-Leiste
 
-Eine einfache Leiste, die das Phoenix-Logo sowie, bei Bedarf, eine Versionsnummer darstellt. Es geht mehr um das Logo als um die Leiste, welches sich Ã¼ber die Komponente zentral in alle Services importieren lÃ¤sst.
+Eine einfache Leiste, die das Phoenix-Logo sowie, bei Bedarf, eine Versionsnummer darstellt. Es geht mehr um das Logo als um die Leiste, welches sich über die Komponente zentral in alle Services importieren lässt.
 
-Prinzipiell soll diese Komponente den Standard-Header fÃ¼r alle Phoenix-Services bereitstellen.
+Prinzipiell soll diese Komponente den Standard-Header für alle Phoenix-Services bereitstellen.
+
+Das Projekt ist hier auf Trello zu finden: [Phoenix-Design-System](https://trello.com/b/eCtdNBzu)
 
 ## Installation
 
