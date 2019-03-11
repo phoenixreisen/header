@@ -44,6 +44,10 @@ snitch.spec('Inspect Logobar...', () => {
         snitch(logobar.should.have('.phx-logobar__logo')).equals(true);
         snitch(logobar.should.have('a[href="http:\/\/www.phoenixreisen.com"]')).equals(true);
 
+        const logobar2 = mq(Logobar, { url: 'https://test.url.de'});
+        snitch(logobar2.should.have('.phx-logobar__logo')).equals(true);
+        snitch(logobar2.should.have('a[href="https://test.url.de"]')).equals(true);
+
         const logodiv = mq(logobar.first('.phx-logobar__logo'));
         snitch(logodiv.should.have('img')).equals(true);
     });
