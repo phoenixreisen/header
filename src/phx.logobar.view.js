@@ -5,7 +5,8 @@ const Logobar = {
     view: (vnode) => {
         const { version, url } = vnode.attrs;
         const { protocol, host, pathname } = location;
-        const href = url ? url : `${protocol}//${host}${pathname.length > 1 ? `${pathname}` : ''}`;
+
+        const href = url ? url : `${protocol || ''}//${host}${(pathname && pathname.length > 1) ? `${pathname}` : ''}`;
 
         return(
             <article class="phx-logobar">
@@ -16,9 +17,9 @@ const Logobar = {
                 </a>
 
                 { version ?
-                <div class="phx-logobar__version">
-                    { version }
-                </div>
+                    <div class="phx-logobar__version">
+                        { version }
+                    </div>
                 : ''}
             </article>
         );
