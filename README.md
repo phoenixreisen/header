@@ -4,6 +4,8 @@ Header-Leiste, die das Phoenix-Logo sowie - bei Bedarf - einen Versionsnamen dar
 
 Prinzipiell soll diese Komponente den Standard-Header für diverse (standalone) Phoenix-Services bereitstellen.
 
+Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
+
 ## Anwendung
 
 Mithril wird benötigt.
