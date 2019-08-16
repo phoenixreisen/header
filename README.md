@@ -1,6 +1,6 @@
-# Phoenix Logo-Leiste
+# Phoenix Header
 
-Header-Leiste, die das Phoenix-Logo sowie, bei Bedarf, einen Applikationsnamen sowie eine Versionsnummer darstellt. Es geht mehr um das Logo als um die Leiste, welches sich über die Komponente zentral in alle Services importieren lässt.
+Header-Leiste, die das Phoenix-Logo sowie - bei Bedarf - einen Versionsnamen darstellt. Es geht mehr um das Logo als um die Leiste, welches sich über die Komponente zentral in alle Services importieren lässt.
 
 Prinzipiell soll diese Komponente den Standard-Header für diverse (standalone) Phoenix-Services bereitstellen.
 
@@ -11,6 +11,7 @@ Mithril wird benötigt.
 ```bash
 npm install --save-dev @phoenixreisen/header
 ```
+
 ```js
 import Header from '@phoenixreisen/header';
 
@@ -18,18 +19,23 @@ import Header from '@phoenixreisen/header';
 
 const Header = require('@phoenixreisen/header');
 ```
+
 ```js
-<Header />
+// @param url verlinkt das Logo entsprechend
+// @param version wird standardmäßig unter dem Logo angezeigt
+
+<Header version="Kabinenpräsente 1.0.0" url="https://www.phoenixreisen.com" />
 
 //oder
 
-m(Header);
+m(Header, { version: "Kabinenpräsente 1.0.0", url: "https://www.phoenixreisen.com" });
 ```
 
 ## Test
 
 ```bash
-npm install
+[npm install]
+
 npm run test
 ```
 
