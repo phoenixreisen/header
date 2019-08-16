@@ -1,32 +1,46 @@
 # Phoenix Logo-Leiste
 
-Eine einfache Leiste, die das Phoenix-Logo sowie, bei Bedarf, eine Versionsnummer darstellt. Es geht mehr um das Logo als um die Leiste, welches sich über die Komponente zentral in alle Services importieren lässt.
+Header-Leiste, die das Phoenix-Logo sowie, bei Bedarf, einen Applikationsnamen sowie eine Versionsnummer darstellt. Es geht mehr um das Logo als um die Leiste, welches sich Ã¼ber die Komponente zentral in alle Services importieren lÃ¤sst.
 
-Prinzipiell soll diese Komponente den Standard-Header für alle Phoenix-Services bereitstellen.
+Prinzipiell soll diese Komponente den Standard-Header fÃ¼r diverse (standalone) Phoenix-Services bereitstellen.
 
-Das Projekt ist hier auf Trello zu finden: [Phoenix-Design-System](https://trello.com/b/eCtdNBzu)
+## Anwendung
 
-## Installation
+Mithril wird benÃ¶tigt.
 
 ```bash
-npm install --save-dev @phoenixreisen/logobar
+npm install --save-dev @phoenixreisen/header
+```
+```js
+import Header from '@phoenixreisen/header';
+
+//oder
+
+const Header = require('@phoenixreisen/header');
+```
+```js
+<Header />
+
+//oder
+
+m(Header);
 ```
 
 ## Test
 
 ```bash
 npm install
-
 npm run test
 ```
 
 ## Deployment
 
 ```bash
-npm run test
+[npm install]
+[npm run test]
 
-npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
-npm publish                         # upload to npm
+npm version [major|minor|patch]  # increase version x.x.x => major.minor.patch
+npm publish                      # upload to npm
 
 hg commit package.json package-lock.json -m "(npm) version increased"
 hg push
