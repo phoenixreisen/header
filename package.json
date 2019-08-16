@@ -6,7 +6,7 @@
   "main": "src/phx.header.view.js",
   "scripts": {
     "pretest": "babel src --out-dir test",
-    "test": "ospec --require /Users/fabian/Workspace/design-komponenten/header/test-setup.js",
+    "test": "ospec --require ./test-setup.js",
     "posttest": "del-cli test"
   },
   "author": "Phoenix Reisen <it@phoenixreisen.com>",
