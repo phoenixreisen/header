@@ -1,23 +1,23 @@
 const logo = require('./phx.logo.svg');
 
-const Logobar = {
+const Header = {
 
     view: (vnode) => {
         const { version, url } = vnode.attrs;
         const { protocol, host, pathname } = location;
 
-        const href = url ? url : `${protocol || ''}//${host}${(pathname && pathname.length > 1) ? `${pathname}` : ''}`;
+        const href = url ? url : `${protocol || ''}//${host}${(pathname && pathname.length > 1) ? pathname:''}`;
 
         return(
-            <article class="phx-logobar">
+            <article class="phx-header phx-header">
                 <a href={href}>
-                    <picture class="phx-logobar__logo"> 
+                    <picture class="phx-header__logo"> 
                         <img src={logo} />
                     </picture>
                 </a>
 
                 { version ?
-                    <div class="phx-logobar__version">
+                    <div class="phx-header__version">
                         { version }
                     </div>
                 : ''}
@@ -26,4 +26,6 @@ const Logobar = {
     },
 };
 
-module.exports = Logobar;
+if(typeof module !== 'undefined') {
+    module.exports = Header;
+}

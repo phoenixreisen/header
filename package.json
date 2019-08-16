@@ -1,12 +1,12 @@
 {
-  "name": "@phoenixreisen/logobar",
-  "version": "2.0.3",
-  "description": "This component should provide the default header - including the default Phoenix Logo - for all (micro) services.",
+  "name": "@phoenixreisen/header",
+  "version": "0.0.1",
+  "description": "Standard-Header für diverse Web Applikationen von Phoenix Reisen",
   "homepage": "https://www.phoenixreisen.com",
-  "main": "src/phx.logobar.view.js",
+  "main": "src/phx.header.view.js",
   "scripts": {
     "pretest": "babel src --out-dir test",
-    "test": "ospec",
+    "test": "ospec --require /Users/fabian/Workspace/design-komponenten/header/test-setup.js",
     "posttest": "del-cli test"
   },
   "author": "Phoenix Reisen <it@phoenixreisen.com>",
@@ -18,19 +18,21 @@
   ],
   "repository": {
     "type": "hg",
-    "url": "ssh://hg@bitbucket.org/phoenixreisen/component-logobar"
+    "url": "ssh://hg@bitbucket.org/phoenixreisen/header"
   },
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-file-loader": "^1.1.1",
-    "babel-plugin-inline-svg": "^1.0.0",
+    "babel-plugin-inline-svg": "^1.0.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "del-cli": "^1.1.0",
-    "mithril": "^1.1.6",
+    "del-cli": "^2.0.0",
+    "jsdom": "^15.1.1",
+    "mithril": "^2.0.3",
     "mithril-node-render": "^2.3.2",
-    "mithril-query": "^2.5.2"
+    "mithril-query": "^3.0.1",
+    "ospec": "^4.0.0"
   }
 }
