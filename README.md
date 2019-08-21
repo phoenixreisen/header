@@ -8,10 +8,10 @@ Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-syste
 
 ## Anwendung
 
-Mithril wird benötigt.
+[Mithril](https://mithril.js.org/) wird benötigt.
 
 ```bash
-npm install --save-dev @phoenixreisen/header
+npm install --save @phoenixreisen/header
 ```
 
 ```js
