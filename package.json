@@ -20,7 +20,7 @@
     "type": "hg",
     "url": "ssh://hg@bitbucket.org/phoenixreisen/header"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
@@ -30,9 +30,9 @@
     "babel-preset-env": "^1.7.0",
     "del-cli": "^2.0.0",
     "jsdom": "^15.1.1",
-    "mithril": "^2.0.3",
+    "mithril": "^2.0.4",
     "mithril-node-render": "^2.3.2",
     "mithril-query": "^3.0.1",
-    "ospec": "^4.0.0"
+    "ospec": "^4.0.1"
   }
 }
