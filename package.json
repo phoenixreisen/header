@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "hg",
-    "url": "ssh://hg@bitbucket.org/phoenixreisen/header"
+    "url": "https://github.com/phoenixreisen/header"
   },
   "license": "MIT",
   "devDependencies": {
