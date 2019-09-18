@@ -17,7 +17,7 @@
     "Leon Schmitz <l.schmitz@phoenixreisen.com>"
   ],
   "repository": {
-    "type": "hg",
+    "type": "git",
     "url": "https://github.com/phoenixreisen/header"
   },
   "license": "MIT",
