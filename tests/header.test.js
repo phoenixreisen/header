@@ -19,7 +19,7 @@ snitch.spec('Initialisierungscheck', () => {
 });
 
 snitch.spec('Oberflächencheck', () => {
-    const Header = require('../test/phx.header.view.js');
+    const Header = require('../test/header.view.js');
 
     snitch('"Version" wird nur angezeigt, wenn Parameter gegeben ist', () => {
         const renderWithoutVersion = mq(Header);
