@@ -9,7 +9,7 @@ const Header = {
         const href = url ? url : `${protocol || ''}//${host}${(pathname && pathname.length > 1) ? pathname:''}`;
 
         return(
-            <article class="phx-header phx-header">
+            <article class="phx-header">
                 <a href={href}>
                     <picture class="phx-header__logo"> 
                         <img src={logo} />
