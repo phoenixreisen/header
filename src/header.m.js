@@ -1,9 +1,9 @@
-const logo = require('./phx.logo.svg');
+import logo from './phx.logo.svg';
 
-const Header = {
+export const Header = {
 
-    view: (vnode) => {
-        const { version, url } = vnode.attrs;
+    view: ({attrs}) => {
+        const { version, url } = attrs;
         const { protocol, host, pathname } = location;
 
         const href = url ? url : `${protocol || ''}//${host}${(pathname && pathname.length > 1) ? pathname:''}`;
@@ -11,7 +11,7 @@ const Header = {
         return(
             <article class="phx-header">
                 <a href={href}>
-                    <picture class="phx-header__logo"> 
+                    <picture class="phx-header__logo">
                         <img src={logo} />
                     </picture>
                 </a>
@@ -26,6 +26,4 @@ const Header = {
     },
 };
 
-if(typeof module !== 'undefined') {
-    module.exports = Header;
-}
+export default Header;
