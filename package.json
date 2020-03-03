@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/header",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Standard-Header für diverse Web Applikationen von Phoenix Reisen",
   "homepage": "https://design-system.phoenixreisen.net",
   "main": "dist/header.m.js",
