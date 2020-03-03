@@ -3,22 +3,22 @@ import logo from './phx.logo.svg';
 export const Header = {
 
     view: ({attrs}) => {
-        const {version, url, newTab} = attrs;
+        const {version, url, title, newTab} = attrs;
         const {protocol, host, pathname} = location;
 
         const href = url ? url : `${protocol || ''}//${host}${(pathname && pathname.length > 1) ? pathname:''}`;
 
         return(
             <article class="phx-header">
-                <a href={href} target={newTab || '_self'}>
+                <a href={href} target={newTab || '_self'} title={title || ''}>
                     <picture class="phx-header__logo">
                         <img src={logo} />
                     </picture>
                 </a>
 
-                { version ?
+                {version ?
                     <div class="phx-header__version">
-                        { version }
+                        {version}
                     </div>
                 : ''}
             </article>
