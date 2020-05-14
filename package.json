@@ -4,6 +4,7 @@
   "description": "Standard-Header für diverse Web Applikationen von Phoenix Reisen",
   "homepage": "https://design-system.phoenixreisen.net",
   "main": "dist/header.m.js",
+  "types": "dist/header.m.d.ts",
   "module": "src/header.m.tsx",
   "scripts": {
     "prepublish": "npm test",
