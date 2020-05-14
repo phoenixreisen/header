@@ -1,14 +1,25 @@
-import logo from './phx.logo.svg';
+import m from 'mithril';
 
-export const Header = {
+interface Attrs {
+    version?: string,
+    title?: string,
+    tab?: string,
+    url?: string,
+}
+
+const logo = require('./phx.logo.svg');
+
+export const Header: m.Component<Attrs> = {
 
     view: ({attrs}) => {
-        const {version, url, title, tab} = attrs;
-        const {protocol, host, pathname} = location;
+        const {version, url, title, tab} = attrs as Attrs;
+        const {protocol, host, pathname} = location as Location;
 
-        const href = url ? url : `${protocol || ''}//${host}${(pathname && pathname.length > 1) ? pathname:''}`;
+        const href = !url
+            ? `${protocol || ''}//${host}${(pathname?.length > 1) ? pathname : ''}`
+            : url;
 
-        return(
+        return (
             <article class="phx-header">
                 <a href={href} target={tab || '_self'} title={title || ''}>
                     <picture class="phx-header__logo">

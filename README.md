@@ -23,12 +23,12 @@ const Header = require('@phoenixreisen/header');
 ```
 
 ```js
-// @param url verlinkt das Logo entsprechend
-// @param version wird standardmäßig unter dem Logo angezeigt
+// @param "url" verlinkt das Logo entsprechend
+// @param "version" wird standardmäßig unter dem Logo angezeigt
 
 <Header version="Kabinenpräsente 1.0.0" url="https://www.phoenixreisen.com" />
 
-//oder
+// oder
 
 m(Header, { version: "Kabinenpräsente 1.0.0", url: "https://www.phoenixreisen.com" });
 ```
@@ -44,9 +44,7 @@ npm run test
 ## Deployment
 
 ```bash
-[npm install]
-[npm run test]
-
+[npm install]                       # Ahängigkeiten installieren
 npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
 npm publish                         # upload to npm
 git push

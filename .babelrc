@@ -6,8 +6,8 @@
             {
                 "name": "[name].[ext]",
                 "extensions": ["png", "jpg", "jpeg", "gif", "svg"],
-                "publicPath": "/dist",
-                "outputPath": "/dist",
+                "outputPath": "/test",
+                "publicPath": "./",
                 "context": ""
             }
         ],

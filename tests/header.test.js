@@ -1,15 +1,14 @@
-global.m = require('mithril');
+const m = require('mithril');
 const mq = require("mithril-query");
 const test = require("ospec");
 const fs = require('fs');
 
-/** <Global Scope Stuff> */
-global.location = {
+/** Global Scope Stuff */
+Object.assign(global, m, { location: {
     protocol: 'http:',
     host: 'www.phoenixreisen.com',
     pathname: '/'
-};
-/** </Global Scope Stuff> */
+}});
 
 test.spec('Initialisierungscheck', () => {
     test('Logodatei vorhanden', () => {
@@ -19,7 +18,7 @@ test.spec('Initialisierungscheck', () => {
 });
 
 test.spec('Oberflächencheck', () => {
-    const Header = require('../dist/header.m.js').default;
+    const Header = require('../test/header.m.js').default;
 
     test('"Version" wird nur angezeigt, wenn Parameter gegeben ist', () => {
         const renderWithoutVersion = mq(Header);
