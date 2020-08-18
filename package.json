@@ -30,19 +30,23 @@
     "mithril": "^2.0.4"
   },
   "devDependencies": {
-    "@types/mithril": "^2.0.2",
+    "@types/mithril": "^2.0.3",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-file-loader": "^2.0.0",
-    "babel-plugin-inline-svg": "^1.0.1",
+    "babel-plugin-inline-svg": "^1.1.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "del-cli": "^3.0.0",
-    "jsdom": "^16.2.2",
+    "del-cli": "^3.0.1",
+    "jsdom": "^16.4.0",
     "mithril-node-render": "^3.0.0",
     "mithril-query": "^3.1.0",
     "ospec": "^4.1.1",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.2"
+    "rollup": "^2.26.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-url": "^3.0.1",
+    "tslib": "^2.0.1",
+    "typescript": "^3.9.7"
   }
 }
