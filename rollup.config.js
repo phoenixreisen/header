@@ -3,9 +3,9 @@ import commonjs from 'rollup-plugin-commonjs';
 import url from 'rollup-plugin-url';
 
 export default {
-    input: './example/index.ts',
+    input: './docs/index.ts',
     output: {
-        file: './example/example.min.js',
+        file: './docs/example.min.js',
         name: 'bundle',
         format: 'iife',
     },

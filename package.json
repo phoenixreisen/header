@@ -7,12 +7,11 @@
   "types": "dist/header.m.d.ts",
   "module": "src/header.m.tsx",
   "scripts": {
-    "prepublish": "npm test",
-
+    "prepublish": "npm test && npm run publish:example",
+    "publish:example": "npx gh-pages -d example",
     "test": "ospec --preload ./test-setup.js",
     "pretest": "del-cli ./dist && npm run copy:img && npm run compile:ts && npm run compile:js && npm run compile:scss && npm run compile:example",
     "posttest": "del-cli ./test",
-
     "compile:example": "npx rollup -c",
     "compile:ts": "npx tsc --build tsconfig.json",
     "compile:js": "npx babel ./dist/ --out-dir ./test/",
@@ -40,11 +39,16 @@
     "babel-plugin-inline-svg": "^1.0.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "del-cli": "^3.0.0",
+    "del-cli": "^3.0.1",
+    "gh-pages": "^3.1.0",
     "jsdom": "^16.2.2",
     "mithril-node-render": "^3.0.0",
     "mithril-query": "^3.1.0",
     "ospec": "^4.1.1",
+    "rollup": "^2.26.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-url": "^3.0.1",
     "tslib": "^2.0.0",
     "typescript": "^3.9.2"
   }
