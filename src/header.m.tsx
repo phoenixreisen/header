@@ -1,17 +1,18 @@
+import logo from './phx.logo.svg';
 import m from 'mithril';
 
 interface Attrs {
-    version?: string,
-    title?: string,
-    tab?: string,
     url?: string,
+    tab?: string,
+    title?: string,
+    version?: string,
+    toggleNav?: () => void,
 }
-
-const logo = require('./phx.logo.svg');
 
 export const Header: m.Component<Attrs> = {
 
     view: ({attrs}) => {
+        const {toggleNav} = attrs as Attrs;
         const {version, url, title, tab} = attrs as Attrs;
         const {protocol, host, pathname} = location as Location;
 
@@ -31,7 +32,16 @@ export const Header: m.Component<Attrs> = {
                     <div class="phx-header__version">
                         {version}
                     </div>
-                : ''}
+                    : ''}
+
+                {toggleNav ?
+                    <div class="phx-header__nav-btn">
+                        <a href="javascript:" title="Navigation ein- & ausblenden" class="phx-nav-btn noprint"
+                            onclick={() => toggleNav()}>
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                    : ''}
             </article>
         );
     },
