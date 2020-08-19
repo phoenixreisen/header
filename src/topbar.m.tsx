@@ -7,8 +7,8 @@ type AttrProps = {
     backUrl?: string,
     faviconUrl?: string,
     faviconTarget?: string,
-    toggleNav?: () => void,
-    toggleAvatar?: () => void,
+    toggleNav?: (e?: Event) => void,
+    toggleAvatar?: (e?: Event) => void,
 }
 
 type StateProps = {
@@ -74,7 +74,7 @@ export const Topbar: m.Component<AttrProps, StateProps> = {
                         <article class="top-bar__avatar noprint">
                             <a href="javascript:" class="avatar-cta avatar-cta--topbar"
                                 title="Service, Einstellungen & Optionen"
-                                onclick={() => toggleAvatar()}>
+                                onclick={(e: Event) => toggleAvatar(e)}>
                                 <i class="fas fa-user avatar__symbol"></i>
                             </a>
                         </article>
@@ -83,7 +83,7 @@ export const Topbar: m.Component<AttrProps, StateProps> = {
                     {toggleNav ?
                         <a href="javascript:" class="nav-btn top-bar__nav-btn noprint"
                             title="Navigation ein-/ausblenden"
-                            onclick={() => toggleNav()}>
+                            onclick={(e: Event) => toggleNav(e)}>
                             <i class="fas fa-bars"></i>
                         </a>
                         : ''}
