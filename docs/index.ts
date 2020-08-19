@@ -1,10 +1,8 @@
-import Header from '../src/header.m';
-import Topbar from '../src/topbar.m';
+import {Header, Topbar} from '../src/index.m';
 import m from 'mithril';
 
 const toggleNav = (state) => {
     state.open = !state.open;
-    console.log(state.open);
 };
 
 const Root = {
@@ -22,6 +20,7 @@ const Root = {
                 }),
             ),
             m(Topbar, {
+                name: 'Phoenix Demo App',
                 backUrl: 'https://www.phoenixreisen.com',
                 toggleNav: () => toggleNav(state),
                 toggleAvatar: () => toggleNav(state),

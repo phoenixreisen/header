@@ -17,10 +17,10 @@ test.spec('Initialisierungscheck', () => {
     });
 });
 
-test.spec('Oberflächencheck', () => {
+test.spec('Header', () => {
     const Header = require('../test/header.m.js').default;
 
-    test('"Version" wird nur angezeigt, wenn Parameter gegeben ist', () => {
+    test('zeigt "Version" nur an, wenn Parameter gegeben ist', () => {
         const renderWithoutVersion = mq(Header);
         test(renderWithoutVersion.should.not.have('.phx-header__version')).equals(true);
 
@@ -28,10 +28,11 @@ test.spec('Oberflächencheck', () => {
         test(renderWithVersion.should.have('.phx-header__version')).equals(true);
     });
 
-    test('Logo wird angezeigt', () => {
+    test('rendert Logo korrekt', () => {
         const header = mq(Header);
         test(header.should.have('.phx-header__logo')).equals(true);
         test(header.should.have('a[href="http:\/\/www.phoenixreisen.com"]')).equals(true);
+        test(header.should.have('img[src="./phx.logo.svg"]')).equals(true);
 
         const header2 = mq(Header, { url: 'https://test.url.de'});
         test(header2.should.have('.phx-header__logo')).equals(true);

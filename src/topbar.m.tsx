@@ -3,6 +3,7 @@ import m from 'mithril';
 //--- Types -----
 
 type AttrProps = {
+    name: string,
     backUrl?: string,
     faviconUrl?: string,
     faviconTarget?: string,
@@ -20,7 +21,7 @@ type StateProps = {
 const _getScrollOffset = () => {
     return window.scrollY
         || window.pageYOffset
-        || document.body.scrollTop + (document.documentElement && document.documentElement.scrollTop || 0);
+        || document.body.scrollTop + (document.documentElement?.scrollTop || 0);
 };
 
 const _checkPosition = (state: StateProps) => {
@@ -49,7 +50,7 @@ export const Topbar: m.Component<AttrProps, StateProps> = {
     },
 
     view({attrs, state}: m.Vnode<AttrProps, StateProps>) {
-        const {backUrl, faviconUrl, faviconTarget} = attrs;
+        const {backUrl, faviconUrl, faviconTarget, name} = attrs;
         const {toggleNav, toggleAvatar} = attrs;
         const {isVisible} = state;
 
@@ -65,13 +66,14 @@ export const Topbar: m.Component<AttrProps, StateProps> = {
 
                         <a href={faviconTarget || 'https://www.phoenixreisen.com'} title="zur Startseite">
                             <img src={faviconUrl || 'https://phoenixreisen.com/favicon.png'} class="top-bar__icon" alt="" />
-                            <span class="ml1">Mein Phoenix</span>
+                            <span class="ml1">{name}</span>
                         </a>
                     </div>
 
                     {toggleAvatar ?
-                        <article class="top-bar__avatar">
-                            <a href="javascript:" class="avatar-cta avatar-cta--topbar" title="Buchungsdaten anzeigen"
+                        <article class="top-bar__avatar noprint">
+                            <a href="javascript:" class="avatar-cta avatar-cta--topbar"
+                                title="Service, Einstellungen & Optionen"
                                 onclick={() => toggleAvatar()}>
                                 <i class="fas fa-user avatar__symbol"></i>
                             </a>
@@ -79,7 +81,8 @@ export const Topbar: m.Component<AttrProps, StateProps> = {
                         : ''}
 
                     {toggleNav ?
-                        <a href="javascript:" class="nav-btn top-bar__nav-btn noprint" title="Navigation ein-/ausblenden"
+                        <a href="javascript:" class="nav-btn top-bar__nav-btn noprint"
+                            title="Navigation ein-/ausblenden"
                             onclick={() => toggleNav()}>
                             <i class="fas fa-bars"></i>
                         </a>

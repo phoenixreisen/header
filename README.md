@@ -1,10 +1,15 @@
 # Phoenix Header
 
-Header-Leiste, die das Phoenix-Logo sowie - bei Bedarf - einen Versionsnamen darstellt. Es geht mehr um das Logo als um die Leiste, welches sich über die Komponente zentral in alle Services importieren lässt.
+Header-Leiste, die das Phoenix-Logo sowie - bei Bedarf - einen App-/Versionsnamen darstellt. Zudem ist eine
+Sticky Topbar enthalten, die eingeblendet wird, sobald der User nach unten über den Header hinaus scrollt.
 
 Prinzipiell soll diese Komponente den Standard-Header für diverse (standalone) Phoenix-Services bereitstellen.
 
 Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
+
+## Demo
+
+https://phoenixreisen.github.io/header/
 
 ## Anwendung
 
@@ -15,22 +20,29 @@ npm install --save @phoenixreisen/header
 ```
 
 ```js
-import Header from '@phoenixreisen/header';
+import {Header, Topbar} from '@phoenixreisen/header';
 
-//oder
+// JSX
+<Header
+    version="Kabinenpräsente 1.0.0"             // wird standardmäßig unter dem Logo angezeigt
+    url="https://www.phoenixreisen.com"         // verlinkt das Logo entsprechend
+/>
+<Topbar
+    backUrl="https://www.phoenixreisen.com"
+    toggleNav={() => console.info('toggled')}    // bewirkt, dass das Hamburger-Icon angezeigt wird
+    toggleAvatar={() => console.info('toggled')} // bewirkt, dass das Avatar-Icon angezeigt wird
+/>
 
-const Header = require('@phoenixreisen/header');
-```
-
-```js
-// @param "url" verlinkt das Logo entsprechend
-// @param "version" wird standardmäßig unter dem Logo angezeigt
-
-<Header version="Kabinenpräsente 1.0.0" url="https://www.phoenixreisen.com" />
-
-// oder
-
-m(Header, { version: "Kabinenpräsente 1.0.0", url: "https://www.phoenixreisen.com" });
+// Hyperscript
+m(Header, {
+    version: "Kabinenpräsente 1.0.0",           // wird standardmäßig unter dem Logo angezeigt
+    url: "https://www.phoenixreisen.com"        // verlinkt das Logo entsprechend
+});
+m(Topbar, {
+    backUrl: 'https://www.phoenixreisen.com',
+    toggleNav: () => console.info('toggled'),    // bewirkt, dass das Hamburger-Icon angezeigt wird
+    toggleAvatar: () => console.info('toggled'), // bewirkt, dass das Avatar-Icon angezeigt wird
+});
 ```
 
 ## Test
