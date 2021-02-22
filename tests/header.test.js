@@ -22,23 +22,23 @@ test.spec('Header', () => {
 
     test('zeigt "Version" nur an, wenn Parameter gegeben ist', () => {
         const renderWithoutVersion = mq(Header);
-        test(renderWithoutVersion.should.not.have('.phx-header__version')).equals(true);
+        test(renderWithoutVersion.should.not.have('.header__version')).equals(true);
 
         const renderWithVersion = mq(Header, { version: '1.0.0'});
-        test(renderWithVersion.should.have('.phx-header__version')).equals(true);
+        test(renderWithVersion.should.have('.header__version')).equals(true);
     });
 
     test('rendert Logo korrekt', () => {
         const header = mq(Header);
-        test(header.should.have('.phx-header__logo')).equals(true);
+        test(header.should.have('.header__logo')).equals(true);
         test(header.should.have('a[href="http:\/\/www.phoenixreisen.com"]')).equals(true);
         test(header.should.have('img[src="./phx.logo.svg"]')).equals(true);
 
         const header2 = mq(Header, { url: 'https://test.url.de'});
-        test(header2.should.have('.phx-header__logo')).equals(true);
+        test(header2.should.have('.header__logo')).equals(true);
         test(header2.should.have('a[href="https://test.url.de"]')).equals(true);
 
-        const logodiv = mq(header.first('.phx-header__logo'));
+        const logodiv = mq(header.first('.header__logo'));
         test(logodiv.should.have('img')).equals(true);
     });
 });

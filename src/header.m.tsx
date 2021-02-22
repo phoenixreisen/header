@@ -21,22 +21,22 @@ export const Header: m.Component<Attrs> = {
             : url;
 
         return (
-            <article class="phx-header">
+            <article class="header">
                 <a href={href} target={tab || '_self'} title={title || ''}>
-                    <picture class="phx-header__logo">
+                    <picture class="header__logo">
                         <img src={logo} />
                     </picture>
                 </a>
 
                 {version ?
-                    <div class="phx-header__version">
+                    <div class="header__version">
                         {version}
                     </div>
                     : ''}
 
                 {toggleNav ?
-                    <div class="phx-header__nav-btn">
-                        <a href="javascript:" title="Navigation ein- & ausblenden" class="phx-nav-btn noprint"
+                    <div class="header__nav-btn">
+                        <a href="javascript:" title="Navigation ein- & ausblenden" class="nav-btn noprint"
                             onclick={() => toggleNav()}>
                             <i class="fas fa-bars"></i>
                         </a>
