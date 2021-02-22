@@ -8,7 +8,13 @@ export default {
         file: './docs/example.min.js',
         name: 'bundle',
         format: 'iife',
+        globals: {
+            'mithril': 'm'
+        }
     },
+    external: [
+        'mithril'
+    ],
     plugins: [
         typescript(),
         commonjs(),
