@@ -1,3 +1,5 @@
+/** @jsx m */
+
 import logo from './phx.logo.svg';
 import m from 'mithril';
 
